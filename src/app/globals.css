@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --radius: 0.5rem;
+  }
+}
+
+html,
+body {
+  @apply flex flex-col w-full min-h-screen grow;
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-gray-light;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-primary;
+}
+
+.swiper-pagination {
+  @apply flex items-center gap-2 bottom-4 absolute left-0 w-full justify-center z-[1];
+}
+
+.swiper-pagination-bullet {
+  @apply border-[0.5px] flex w-[6px] h-[6px] rounded-none bg-none border-white rotate-45 transition-all cursor-pointer;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-white;
+}
+
+.swiper.grey .swiper-pagination {
+  @apply relative bottom-0 left-0 mt-4 pb-1;
+}
+
+.swiper.grey .swiper-pagination-bullet {
+  @apply border-gray-placeholder;
+}
+
+.swiper.grey .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  @apply bg-gray-placeholder;
+}
+
+.swiper.vertical .swiper-pagination {
+  @apply flex-col h-full items-end right-4 left-auto w-fit;
+}
+
+@media (max-width: 1024px) {
+  .product-content-slider {
+    @apply w-full;
+  }
+}
