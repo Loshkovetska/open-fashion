@@ -1,0 +1,52 @@
+@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#app {
+  @apply flex flex-col w-full min-h-screen grow;
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Track
+::-webkit-scrollbar-track {
+  @apply bg-[#C4C4C4];
+}
+
+Handle
+::-webkit-scrollbar-thumb {
+  @apply bg-primary;
+} */
+
+.swiper-pagination {
+  @apply flex items-center gap-2 bottom-4 absolute left-0 w-full justify-center z-[1];
+}
+
+.swiper-pagination-bullet {
+  @apply border-[0.5px] flex w-[6px] h-[6px] rounded-none bg-none border-white rotate-45 transition-all cursor-pointer;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-white;
+}
+
+.swiper.grey .swiper-pagination {
+  @apply relative bottom-0 left-0 mt-4 pb-1;
+}
+
+/* .swiper.grey .swiper-pagination-bullet {
+  @apply border-[#888888];
+} */
+
+/* .swiper.grey .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  @apply bg-[#888888];
+} */
+
+.swiper.vertical .swiper-pagination {
+  @apply flex-col h-full items-end right-4 left-auto w-fit;
+}
