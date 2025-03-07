@@ -3,8 +3,8 @@ import Logo from '@/components/icons/logo-icon.vue'
 import Menu from '@/components/icons/menu-icon.vue'
 import Search from '@/components/icons/search-icon.vue'
 import ShopBag from '@/components/icons/shop-icon.vue'
-import { cn } from '@/lib/utils'
-import { useGlobalStore } from '@/stores'
+import { cn } from '@/shared/utils'
+import { useGlobalStore } from '@/shared/stores'
 import { RouterLink } from 'vue-router'
 
 const props = defineProps<{ headerColor?: string }>()
